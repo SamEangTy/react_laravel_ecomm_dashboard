@@ -17,4 +17,19 @@ class ProductController extends Controller
         $product->save();
         return  $product;
     }
+    function listPro(){
+        $product = Product::all();
+        return $product;
+    }
+    function deletePro($id){
+        $deletePro = Product::where('id',$id)->delete();
+        if($deletePro){
+            return ["message"=>"Product deleted"];
+        }else{
+            return ['message'=>"Product not found!"];
+        }
+    }
+    function getOne($id){
+        return Product::find($id);
+    }
 }
