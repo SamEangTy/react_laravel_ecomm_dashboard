@@ -5,6 +5,7 @@ import Login from './Page/login/Login';
 import Register from './Page/register/Register';
 import AddProduct from './Page/addProduct/AddProduct';
 import UpdateProduct from './Page/updateProduct/UpdateProduct.jsx';
+import ProductList from './Page/productList/ProductList';
 
 function App() {
   const isLogin = (localStorage.getItem("is_login") == "1")
@@ -14,9 +15,10 @@ function App() {
         {/* <Header/> */}
         {isLogin &&
           <Routes>
+            <Route path='/' element={<ProductList/>}/>
             <Route path='/add-pro' element={<AddProduct/>}/>
-            <Route path='/update-pro' element={<UpdateProduct/>}/>
-            <Route path='*' element={<AddProduct/>}/>
+            <Route path='/update-pro/:id' element={<UpdateProduct/>}/>
+            {/* <Route path='*' element={<AddProduct/>}/> */}
         </Routes>
         }
         {!isLogin &&

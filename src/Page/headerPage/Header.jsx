@@ -17,6 +17,7 @@ export default function Header() {
                   {isLogin && 
                   <div className='homepage'>
                     <div>
+                      <Link to="/">Product</Link>
                       <Link to="/add-pro">Add Product</Link>
                       <Link to="/update-pro">Update Product</Link>
                     </div>
