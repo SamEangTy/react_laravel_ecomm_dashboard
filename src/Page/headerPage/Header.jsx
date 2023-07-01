@@ -7,7 +7,7 @@ export default function Header() {
   
   const handleLogout = ()=>{
     localStorage.clear()
-    window.location.href = "/login"
+    window.location.href = "/"
   }
   return (
     <div className='header'>

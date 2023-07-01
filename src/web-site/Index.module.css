@@ -1,0 +1,43 @@
+.main {
+    background-color: antiquewhite;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rowImag{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.txtBrand {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.txtBrandSub {
+    font-size: 11px;
+    color: #444;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.menuItem { 
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.menuItem:hover{
+    background-color: #d8cccc;
+}

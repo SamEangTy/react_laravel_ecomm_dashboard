@@ -24,17 +24,23 @@ export default function Login() {
       }else{
         localStorage.setItem("user_info",JSON.stringify(res.data))
         localStorage.setItem("is_login","1")
-        window.location.href = "/add-pro"
+        window.location.href = "/dashboard"
       }
     }).catch(err=>{
       console.log(err);
     })
   }
+ const  handleKeyPress = (e)=> {
+    if (e.key === 'Enter') {
+      handleLogin()
+    }
+  }
+  
   return (
     <div>
       <Header/>
      <h1>Login</h1>
-     <div className='col-sm-6 offset-sm-3'>
+     <div className='col-sm-6 offset-sm-3' onKeyPress={handleKeyPress}>
         <input type="text" placeholder='email' onChange={(e)=>setEmail(e.target.value)} className='form-control'/>
         <br/>
         <input type="password" placeholder='password' onChange={(e)=>setPassword(e.target.value)} className='form-control'/>
